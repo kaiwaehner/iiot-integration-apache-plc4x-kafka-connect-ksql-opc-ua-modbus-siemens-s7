@@ -2,7 +2,7 @@
 
 # Kafka-native end-to-end IIoT Data Integration and Processing with Kafka Connect, KSQL and Apache PLC4X
 
-This project shows how to integrate, process and analyze data from Industrial IoT (IIoT) devices and machines in real time, reliable and scalable. We leverage Apache Kafka, Kafka Connect, KSQL and Apache PLC4X. 
+This project shows how to integrate, process and analyze data from Industrial IoT (IIoT) devices and machines in real time, reliable and scalable. We leverage [Apache Kafka](https://kafka.apache.org), [Kafka Connect](https://docs.confluent.io/current/connect/index.html), [KSQL](https://github.com/confluentinc/ksql) and [Apache PLC4X](https://plc4x.apache.org). 
 
 ## Use Cases in Industry 4.0 / IIoT - Big Data, Analytics, Real Time Processing
 
@@ -13,7 +13,7 @@ This project shows how to integrate, process and analyze data from Industrial Io
 
 ### Manufacturing
 
-- Collect data from machines  Preprocess + monitoring to optimize assembly line and reduce cost
+- Collect data from machines --> Preprocess + monitoring to optimize assembly line and reduce cost
 - Aggregate data from different machines / companies —> Leverage (and sell?) insights
 - Sell services on top of machines —> Predictive maintenance (remote)
 - Scale up (add more sites, add more data)
@@ -38,7 +38,7 @@ IIoT usually uses incompatible protocols, which typically are proprietary. Machi
 
 Factories are built out of monoliths without scalability, extendibility, or real failover. Security is completely missing - there is no authentication or authorization. 
 
-In real world, you typically see one of two sitations:
+In real world, you typically see one of two situations:
 
 - A company does not have access to the valuable data of its machines and devices
 - A proprietary, inflexible, monolithic, expensive IoT solution is bought and installed for each PLC technology like Siemens S7, Modbus, etc. (often combined with another "central general middleware solution")
@@ -51,20 +51,13 @@ As a side note: This project is not about the central integration middleware, bu
 
 Huge opportunities exist in IIoT and Industry 4.0, but you need to get rid of the old legacy architecture (while you need to keep the old machines and legacy protocols, unfortunately). 
 
-Here is the key characteristics of the new architecture:
-
-- Cost reduction
-- Flexibility 
-- Standards-based
-- Scalability 
-- Extendibility
-- Security
+![Characteristics of a Flexible IoT Platform](pictures/Characteristics_Flexible_IoT_Platform.png)
 
 How to get from legacy, proprietary to cloud, big data, machine learning to realize all these valuable use cases?
 
 ## Architecture
 
-We demonstrate how to achieve all characteristics leveraging the following open source technologies:
+We demonstrate how to achieve all characteristics (cost reduction, flexibility , standards-based, scalability, extendibility, security) leveraging the following open source technologies:
 
 - Apache Kafka: An Event Streaming platform to process huge volumes of data reliably in real time
 - Kafka Connect: A general integration framework built on top of Kafka (and part of the same Apache project) to leverage all of its features under the hood to integrate with any source or sink
